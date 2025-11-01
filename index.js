@@ -51,3 +51,4 @@ const typed = new Typed(' .multiple-text', {
     backDealy: 1000,
     loop: true
 });
+

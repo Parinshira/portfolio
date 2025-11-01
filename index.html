@@ -135,7 +135,7 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
             <input type="hidden" name="access_key" value="ee26ef18-aed9-492e-b571-737c3cc754a5">
 
             <div class="input-box">
@@ -150,6 +150,35 @@
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          alert("✅ Message sent successfully!");
+          form.reset(); // ✅ clear all fields
+        } else {
+          alert("❌ Failed to send message. Please try again.");
+        }
+      } catch (error) {
+        alert("⚠️ Network error. Please try again later.");
+      }
+    });
+  });
+</script>
 
 <footer class="footer">
     <div class="footer-text">
