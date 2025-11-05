@@ -12,7 +12,7 @@
 
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+        <a href="#" class="logo">Parin Shira</a>
 
         <i class='bx bx-menu' id="menu-icon"></i>
 
@@ -30,9 +30,17 @@
             <h3>Hello, It's Me</h3>
             <h1>Parin Shira</h1>
             <h3>And I'm a <span>Security Engineer</span></h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus dolor, nobis quaerat fuga dicta
-                suscipit ut harum numquam, fugiat enim illum reprehenderit. Iste, modi voluptatibus? Asperiores
-                accusantium vitae dolorum et!</p>
+            <p>I’m a passionate Cybersecurity Analyst specializing in network protection, threat analysis, and phishing
+                attack prevention. With a strong foundation in network security protocols, vulnerability assessment, and
+                incident response, I focus on identifying risks before they turn into real threats.
+
+                My work involves designing secure network environments, detecting phishing campaigns, and implementing
+                proactive defense mechanisms to protect sensitive data. I have hands-on experience in analyzing security
+                logs, monitoring intrusion attempts, and applying effective countermeasures to safeguard systems.
+
+                I believe cybersecurity is not just about technology—it’s about trust, awareness, and continuous
+                improvement. My mission is to strengthen digital resilience and create a safer cyberspace through
+                analytical thinking, ethical practices, and technical precision.</p>
             <div class="social-media">
                 <a href="https://github.com/Parinshira" target="_blank"><i class='bx bxl-github'></i></a>
                 <a href="https://linkedin.com/in/shira-parin" target="_blank"><i class='bx bxl-linkedin'></i></a>
@@ -74,7 +82,7 @@
                     incidunt distinctio totam dicta ipsam sunt? Veritatis?</p>
                 <a href="#" class="btn">Reade More</a>
             </div>
-            
+
             <div class="services-box">
                 <i class='bx bx-code-alt'></i>
                 <h3>Protect Web Site</h3>
@@ -83,7 +91,7 @@
                 <a href="#" class="btn">Reade More</a>
             </div>
 
-          
+
 
         </div>
     </section>
@@ -152,50 +160,50 @@
     </section>
 
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contact-form");
 
-    form.addEventListener("submit", async function (e) {
-      e.preventDefault();
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
 
-      const formData = new FormData(form);
+                const formData = new FormData(form);
 
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: { 'Accept': 'application/json' }
+                try {
+                    const response = await fetch(form.action, {
+                        method: form.method,
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        alert("✅ Message sent successfully!");
+                        form.reset(); // ✅ clear all fields
+                    } else {
+                        alert("❌ Failed to send message. Please try again.");
+                    }
+                } catch (error) {
+                    alert("⚠️ Network error. Please try again later.");
+                }
+            });
         });
+    </script>
 
-        if (response.ok) {
-          alert("✅ Message sent successfully!");
-          form.reset(); // ✅ clear all fields
-        } else {
-          alert("❌ Failed to send message. Please try again.");
-        }
-      } catch (error) {
-        alert("⚠️ Network error. Please try again later.");
-      }
-    });
-  });
-</script>
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by Parin | All Rights Reserved.</p>
+        </div>
 
-<footer class="footer">
-    <div class="footer-text">
-        <p>Copyright &copy; 2025 by Parin | All Rights Reserved.</p>
-    </div>
-
-    <div class="footer-iconTop">
-        <a href="#home"><i class='bx bx-up-arrow-alt' ></i></a>
-    </div>
-</footer>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
 
 
 
-<!--javascript-->
+    <!--javascript-->
 
-<script src="https://unpkg.com/scrollreveal"></script>
-<script  src="index.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
